@@ -218,13 +218,24 @@ public interface Linguagem {
 	}
 	
 	class ExpDiv extends ExpBin {
-		public ExpMult(Expressao esq, Expressao dir) {
+		public ExpDiv(Expressao esq, Expressao dir) {
 			super(esq, dir);
 		}
 
 		@Override
 		public int getValor() {
 			return esq.getValor() / dir.getValor();
+		}
+	}
+	
+	class ExpExp extends ExpBin {
+		public ExpExp(Expressao esq, Expressao dir) {
+			super(esq, dir);
+		}
+
+		@Override
+		public int getValor() {
+			return esq.getValor() ^ dir.getValor();
 		}
 	}
 

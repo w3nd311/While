@@ -20,6 +20,7 @@ expressao: INT                                      # inteiro
          | expressao '+' expressao                  # opBin
          | expressao '-' expressao                  # opBin
          | expressao '/' expressao					# opBin
+         | expressao '^' expressao					# opBin
          | '(' expressao ')'                        # expPar
          ;
 
